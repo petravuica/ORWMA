@@ -1,0 +1,424 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.header{
+    min-height: 70vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.1),rgba(4,9,30,0.7)), url("../images/naslovnica.jpg");
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+/*
+.header h1{
+    font-size: 30px;
+    margin-left: 50px;
+    margin-right: 60px; 
+    color: #fff
+}*/
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+       
+}
+
+nav h1{
+    font-size: 30px;
+    color: #ffffff;
+}
+.nav_links{
+    flex: 1;
+    text-align: right;
+    
+}
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding:8px 18px;
+    position: relative;
+}
+.nav_links ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav_links ul li::after{
+    content:'';
+    width:0%;
+    height: 2px;
+    background:#180868;
+    display: block;
+    margin:auto;
+    transition: 0.5s;
+}
+.nav_links ul li:hover::after{
+    width: 100%;
+}
+.sub_menu_1{
+    display: none;
+}
+
+.nav_links ul li:hover .sub_menu_1{
+    display: block;
+    position:absolute;
+    margin-top: 5px;
+    margin-left: -15px;
+}
+.nav_links ul li:hover .sub_menu_1 ul{
+    display:block;
+    margin: 5px;
+    text-align: left;
+}
+.nav_links ul li:hover .sub_menu_1 ul li{
+    width:auto;
+    padding: 10px;
+    background: transparent;
+    border-radius: 0;
+}
+.heading{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    text-align:  center;
+    margin: 20px auto;
+}
+.heading h1{
+    font-size: 30px;
+    color: #000;
+    margin-bottom: auto;
+    text-align: left;
+}
+.heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-image{
+    flex:1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    transform: scale(1.2);
+}
+.about-content{
+    flex: 1;
+}
+.about-content h3{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+.about-content .read-more{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(1,64,133,255);
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+.about-content .read-more:hover{
+   background-color: #2d06f4;
+}
+
+
+/*on nama*/
+.sub-header{
+    height: 37vh;
+    width: 100%;
+    background-color: rgba(1,64,133,255);
+    text-align: center;
+    color: #ffffff;
+}
+.sub-header h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.opis{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+.opis p{
+    text-align: left;
+    font-size: 20px;
+    color: black;
+}
+.opis h2{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.opis ul li{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.galerija{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 10%;
+}
+.galerija p{
+    margin-top: 10px;
+    text-align: center;
+    font-size:  20px;
+    color: black;
+}
+.row2{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col2{
+    flex-basis: 40%;
+}
+.col2 img{
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    transition: 0.3s all;
+    margin: 5px;
+}
+.col2:hover{
+    transform: scale(1.2);
+}
+/*easpored*/
+.tablica{
+    width: 85%;
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+}
+.tablica h1{
+    margin-bottom: 10px;
+}
+table{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 85%;
+}
+th{
+    height: 50px;  
+}
+table caption{
+    margin-bottom: 5px;
+}
+table thead{
+    background-color: rgba(1,64,133,255);
+    
+}
+table, th, td{
+    border: 3px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    text-align:center;
+    height: 40px;
+}
+td{
+    background-color: #ded8ff;
+}
+.table2 tbody tr th a{
+    text-decoration: none;
+}
+.table2 tbody tr th:hover{
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/**/
+.raspored{
+    width: 45%;
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.table2 tbody{ /*tbody probati*/
+    background-color: #ded8ff;
+}
+/*KONTAKT*/
+.location{
+    width: 60%;
+    margin:auto;
+    padding: 80px 0;
+}
+.location p{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.location iframe{
+    width: 100%;
+    margin-top: 50px;
+}
+.row{
+    display: flex;
+}
+.contact-us{
+    width:80%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{
+    font-size: 28px;
+    margin: 10px;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color:#000;
+    font-weight: 400;
+}
+.send-form input, .send-form textarea{
+    width:90%;
+    padding: 10px;
+    margin:15px 0;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    outline: none;
+}
+
+.send-form input, .send-form textarea{
+    width: 90%; /*rasi se svaki po 90posto duzine- jedan ispod drugog*/
+    padding: 10px; /*kucica se poveca*/
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    outline: none;
+}
+.send-btn{
+    display: inline-block;
+    color: #000;
+    border: 1px solid #bbb;
+    padding:  12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.send-btn:hover{
+    border: 1px solid rgba(1,64,133,255);
+    background-color: rgba(1,64,133,255);
+    transition: 1s;
+}
+/*seniorke*/
+.ekipa img{
+    width:90%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+.ekipa img:hover{
+    transform: scale(1.1);
+}
+.ekipe{
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    margin-top: 20px;
+    
+}
+.ekipa p{
+    margin: 15px;
+    text-align: justify;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+/**/
+/*footer*/
+.footer{
+   
+    width: 100%;
+    height: 25vh;
+    padding: 30px 0px;
+    text-align: center;
+    background-color: rgba(1,64,133,255);
+    margin-top: 50px;
+}
+.footer h4{
+    color:#ffffff;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.contact-row div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contact-row div .fa{
+    color: white;
+    font-size: 20px; 
+    margin: 10px;
+    margin-right: 15px;
+}
+.contact-row div h5{
+    color: white;
+    font-size: 15px;
+}
+.footer div ul li{
+    list-style: none;
+    display: inline-block;
+}
+.contact-row div ul{
+    margin-left: 40px;
+}
